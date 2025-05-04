@@ -36,67 +36,6 @@ export interface Venue {
 
 const venues: Venue[] = [
   {
-    id: "1",
-    name: "Grand Harmony Hall",
-    location: {
-      address: "123 Main Street",
-      city: "New York",
-      state: "NY",
-      zipCode: "10001",
-      coordinates: {
-        lat: 40.7128,
-        lng: -74.0060
-      }
-    },
-    price: 250, // per hour
-    capacity: 300,
-    amenities: ["WiFi", "Parking", "Catering", "Sound System", "Projector", "Dance Floor", "Bar"],
-    description: "Grand Harmony Hall is a beautiful, spacious venue perfect for large weddings and corporate events. The elegant chandeliers, marble flooring, and large windows create a sophisticated atmosphere that will impress your guests. Our venue also features a professional sound system and lighting for an unforgettable experience.",
-    images: [
-      "https://images.unsplash.com/photo-1551038247-3d9af20df552",
-      "https://images.unsplash.com/photo-1492321936769-b49830bc1d1e",
-      "https://images.unsplash.com/photo-1473177104440-ffee2f376098",
-      "https://images.unsplash.com/photo-1500673922987-e212871fec22",
-    ],
-    rating: 4.8,
-    reviews: 124,
-    eventTypes: ["Wedding", "Corporate", "Conference", "Gala"],
-    faqs: [
-      {
-        question: "Do you provide catering services?",
-        answer: "Yes, we offer full-service catering with a variety of menu options. You can also bring your own caterer for an additional fee."
-      },
-      {
-        question: "Is parking available?",
-        answer: "We offer free parking for up to 150 vehicles. Valet service is available for an additional fee."
-      },
-      {
-        question: "What is your cancellation policy?",
-        answer: "Cancellations made 60+ days before the event receive a 90% refund. 30-59 days before: 50% refund. Less than 30 days: no refund."
-      }
-    ],
-    availabilityCalendar: [
-      {
-        date: "2025-05-15",
-        timeSlots: [
-          { start: "09:00", end: "12:00", isBooked: false },
-          { start: "13:00", end: "16:00", isBooked: true },
-          { start: "17:00", end: "20:00", isBooked: false },
-          { start: "20:00", end: "23:00", isBooked: true }
-        ]
-      },
-      {
-        date: "2025-05-16",
-        timeSlots: [
-          { start: "09:00", end: "12:00", isBooked: false },
-          { start: "13:00", end: "16:00", isBooked: false },
-          { start: "17:00", end: "20:00", isBooked: false },
-          { start: "20:00", end: "23:00", isBooked: false }
-        ]
-      }
-    ]
-  },
-  {
     id: "2",
     name: "Riverside Pavilion",
     location: {
