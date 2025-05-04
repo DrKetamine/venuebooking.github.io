@@ -35,6 +35,67 @@ export interface Venue {
 }
 
 const venues: Venue[] = [
+    {
+    id: "1",
+    name: "Digital Art House",
+    location: {
+      address: "Skolas iela 2",
+      city: "Riga",
+      state: "Centra rajons",
+      zipCode: "LV-1010",
+      coordinates: {
+        lat: 40.7128,
+        lng: -74.0060
+      }
+    },
+    price: 250, // per hour
+    capacity: 230,
+    amenities: ["WiFi", "Parking", "Catering", "Sound System", "Projector", "Dance Floor", "Bar"],
+    description: "At DIGITAL ART HOUSE, you can host product presentations, conferences, client and corporate or private parties, creative events, weddings, and even marriage proposals (yes, we've had that too), as well as concerts. Video projections for venue decoration can be tailored to your preferences.",
+    images: [
+      "https://balticmeetingrooms.com/en/room-photo/1184/1920/digital-art-house-riga-meeting-rooms.jpg.jpg?v=1733047335",
+      "https://balticmeetingrooms.com/en/room-photo/1185/1920/digital-art-house-riga-meeting-rooms.jpg.jpg?v=1733047306",
+      "https://balticmeetingrooms.com/en/room-photo/1186/1920/digital-art-house-riga-meeting-rooms.jpg.jpg?v=1733047360",
+      "https://balticmeetingrooms.com/en/photo/398/1920/digital-art-house-venue-rental-for-events.jpg?v=1739297558",
+    ],
+    rating: 4.8,
+    reviews: 0,
+    eventTypes: ["Wedding", "Corporate", "Conference", "Gala"],
+    faqs: [
+      {
+        question: "Do you provide catering services?",
+        answer: "Yes, we offer full-service catering with a variety of menu options. You can also bring your own caterer for an additional fee."
+      },
+      {
+        question: "Is parking available?",
+        answer: "We offer free parking for up to 150 vehicles. Valet service is available for an additional fee."
+      },
+      {
+        question: "What is your cancellation policy?",
+        answer: "Cancellations made 60+ days before the event receive a 90% refund. 30-59 days before: 50% refund. Less than 30 days: no refund."
+      }
+    ],
+    availabilityCalendar: [
+      {
+        date: "2025-05-15",
+        timeSlots: [
+          { start: "09:00", end: "12:00", isBooked: false },
+          { start: "13:00", end: "16:00", isBooked: true },
+          { start: "17:00", end: "20:00", isBooked: false },
+          { start: "20:00", end: "23:00", isBooked: true }
+        ]
+      },
+      {
+        date: "2025-05-16",
+        timeSlots: [
+          { start: "09:00", end: "12:00", isBooked: false },
+          { start: "13:00", end: "16:00", isBooked: false },
+          { start: "17:00", end: "20:00", isBooked: false },
+          { start: "20:00", end: "23:00", isBooked: false }
+        ]
+      }
+    ]
+  },
   {
     id: "2",
     name: "Riverside Pavilion",
