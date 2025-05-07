@@ -250,7 +250,7 @@ const Booking: React.FC = () => {
                 <Label htmlFor={id}>{label}</Label>
               </div>
             ))}
-          </div>
+            </div>
             <div className="mt-4">
               <Label htmlFor="specialRequests">Special Requests (Optional)</Label>
               <textarea
@@ -263,7 +263,6 @@ const Booking: React.FC = () => {
               />
             </div>
           </div>
-
           <div className="lg:hidden mt-8">
             <Button type="submit" className="w-full bg-primary" disabled={isSubmitting}>
               {isSubmitting ? 'Processing...' : 'Confirm Booking'}
