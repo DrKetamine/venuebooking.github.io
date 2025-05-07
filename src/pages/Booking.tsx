@@ -221,7 +221,29 @@ const Booking: React.FC = () => {
                   required
                 />
               </div>
-              
+              <div className="mb-4">
+              <div className="flex items-center space-x-2">
+                <input
+                  type="checkbox"
+                  id="cleaning"
+                  name="cleaning"
+                  checked={formData.cleaning}
+                  onChange={handleChange}
+                  className="h-4 w-4"
+                />
+                <Label htmlFor="cleaning">Need Cleaning Service</Label>
+              </div>
+              <div className="flex items-center space-x-2 mt-2">
+                <input
+                  type="checkbox"
+                  id="bar"
+                  name="bar"
+                  checked={formData.bar}
+                  onChange={handleChange}
+                  className="h-4 w-4"
+                />
+                <Label htmlFor="bar">Need Bar Service</Label>
+              </div>
               <div>
                 {/* Special Requests */}
                 <Label htmlFor="specialRequests">Special Requests (Optional)</Label>
