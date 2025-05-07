@@ -37,6 +37,10 @@ const Booking: React.FC = () => {
     specialRequests: '',
     cleaning: false,
     bar: false,
+    catering: false,
+    decorators: false,
+    projector: false,
+    microphone: false,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   
@@ -226,30 +230,27 @@ const Booking: React.FC = () => {
               required
             />
           </div>
-
-          <div className="mb-4">
-            <div className="flex items-center space-x-2">
-              <input
-                type="checkbox"
-                id="cleaning"
-                name="cleaning"
-                checked={formData.cleaning}
-                onChange={handleChange}
-                className=""
-              />
-              <Label htmlFor="cleaning">Need Cleaning Service</Label>
-            </div>
-            <div className="flex items-center space-x-2 mt-2">
-              <input
-                type="checkbox"
-                id="bar"
-                name="bar"
-                checked={formData.bar}
-                onChange={handleChange}
-                className=""
-              />
-              <Label htmlFor="bar">Need Bar Service</Label>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-4">
+            {[
+              { id: 'cleaning', label: 'Need Cleaning Service' },
+              { id: 'bar', label: 'Need Bar Service' },
+              { id: 'catering', label: 'Need Catering Service' },
+              { id: 'decorators', label: 'Need Decorators' },
+              { id: 'projector', label: 'Need Projector' },
+              { id: 'microphone', label: 'Need Microphone' }
+            ].map(({ id, label }) => (
+              <div key={id} className="flex items-center space-x-2">
+                <input
+                  type="checkbox"
+                  id={id}
+                  name={id}
+                  checked={formData[id as keyof typeof formData] as boolean}
+                  onChange={handleChange}
+                />
+                <Label htmlFor={id}>{label}</Label>
+              </div>
+            ))}
+          </div>
             <div className="mt-4">
               <Label htmlFor="specialRequests">Special Requests (Optional)</Label>
               <textarea
