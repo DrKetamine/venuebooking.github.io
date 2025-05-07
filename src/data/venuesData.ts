@@ -114,10 +114,7 @@ const venues: Venue[] = [
     amenities: ["WiFi", "Outdoor Space", "Catering", "Sound System", "Bar", "Scenic Views"],
     description: "Riverside Pavilion offers stunning waterfront views and an elegant atmosphere for your special event. The floor-to-ceiling windows showcase the beautiful river and city skyline, creating a magical backdrop. The venue features both indoor and outdoor spaces, allowing your guests to enjoy the fresh air and scenic views.",
     images: [
-      "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
-      "https://images.unsplash.com/photo-1500673922987-e212871fec22",
-      "https://images.unsplash.com/photo-1473177104440-ffee2f376098",
-      "https://images.unsplash.com/photo-1492321936769-b49830bc1d1e",
+      "https://balticmeetingrooms.com/lv/bilde/401/1366/hanzas-perons-telpas-pasakumiem.webp?v=1746093698",
     ],
     rating: 4.6,
     reviews: 89,
@@ -173,10 +170,7 @@ const venues: Venue[] = [
     amenities: ["WiFi", "Industrial Kitchen", "Exposed Brick", "High Ceilings", "Sound System", "Rooftop Access"],
     description: "Urban Loft Space is a trendy, modern venue with industrial charm. The exposed brick walls, large windows, and high ceilings create a unique atmosphere perfect for creative events. This versatile space can be transformed to match any style, from elegant weddings to casual corporate gatherings.",
     images: [
-      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5",
-      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
-      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
+      "https://balticmeetingrooms.com/lv/bilde/28/1366/lielupe-by-semarah-hotels-sapulcu-telpas-jurmala.webp?v=1746351967",
     ],
     rating: 4.7,
     reviews: 76,
@@ -232,10 +226,7 @@ const venues: Venue[] = [
     amenities: ["Outdoor Space", "Gardens", "Pool", "Lighting", "Parking", "Bridal Suite"],
     description: "Sunset Garden is a tropical paradise perfect for outdoor events. Our lush gardens, elegant pool area, and stunning sunset views create a magical atmosphere for weddings and special celebrations. The property features multiple outdoor spaces and a covered pavilion for ceremonies and receptions.",
     images: [
-      "https://images.unsplash.com/photo-1500673922987-e212871fec22",
-      "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
-      "https://images.unsplash.com/photo-1551038247-3d9af20df552",
-      "https://images.unsplash.com/photo-1492321936769-b49830bc1d1e"
+      "https://balticmeetingrooms.com/lv/bilde/238/1366/k-k-fon-stricka-villa-pasakumu-telpas.webp?v=1746080271",
     ],
     rating: 4.9,
     reviews: 112,
@@ -289,10 +280,7 @@ const venues: Venue[] = [
     amenities: ["Scenic Views", "Fireplace", "Outdoor Ceremony Space", "Rustic Decor", "Bar", "Bridal Suite", "Accommodation"],
     description: "Mountain View Lodge offers a rustic yet elegant venue with breathtaking mountain views. The beautiful wood beams, stone fireplace, and floor-to-ceiling windows create a warm, inviting atmosphere. Perfect for weddings and retreats, our venue combines natural beauty with modern amenities.",
     images: [
-      "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
-      "https://images.unsplash.com/photo-1473177104440-ffee2f376098",
-      "https://images.unsplash.com/photo-1492321936769-b49830bc1d1e",
-      "https://images.unsplash.com/photo-1500673922987-e212871fec22"
+      "https://balticmeetingrooms.com/lv/bilde/5/1366/hestia-hotel-draugi-seminaru-telpas-vecriga.webp?v=1744777988",
     ],
     rating: 4.8,
     reviews: 92,
@@ -346,10 +334,7 @@ const venues: Venue[] = [
     amenities: ["Stage", "Historic Architecture", "Premium Sound System", "Balcony", "Dressing Rooms", "Bar"],
     description: "The Historic Opera House is a landmark venue featuring stunning architecture and excellent acoustics. The ornate details, grand stage, and historical significance make this a unique setting for special events. Perfect for performances, weddings, and galas, this venue offers a touch of vintage elegance.",
     images: [
-      "https://images.unsplash.com/photo-1473177104440-ffee2f376098",
-      "https://images.unsplash.com/photo-1551038247-3d9af20df552",
-      "https://images.unsplash.com/photo-1492321936769-b49830bc1d1e",
-      "https://images.unsplash.com/photo-1500673922987-e212871fec22"
+      "https://balticmeetingrooms.com/lv/bilde/27/1366/baltic-beach-hotel-spa-telpas-konferencem-jurmala.webp?v=1744000064",
     ],
     rating: 4.7,
     reviews: 85,
