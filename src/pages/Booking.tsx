@@ -108,65 +108,131 @@ const Booking: React.FC = () => {
   }
 
   return (
-    <div className="p-4 space-y-6">
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div>
-          <label className="block text-sm font-medium">Name</label>
-          <input
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            className="mt-1 p-2 border w-full"
-            required
-          />
+    <div className="container mx-auto px-4 py-8 md:py-12">
+      <Button 
+        variant="outline" 
+        className="mb-6" 
+        onClick={() => navigate(`/venue/${id}`)}
+      >
+        <ChevronLeft className="mr-1 h-4 w-4" /> Back to Venue
+      </Button>
+      
+      <h1 className="text-2xl md:text-3xl font-bold mb-2">Book {venue.name}</h1>
+      <p className="text-gray-600 mb-8">Fill in the details below to complete your booking</p>
+      
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="lg:col-span-2 space-y-6">
+          {/* Event Details Section */}
+          <Card>
+            <CardContent className="pt-6">
+              <h2 className="text-xl font-semibold mb-4">Event Details</h2>
+              
+              <div className="space-y-4">
+                <div>
+                  <Label htmlFor="eventType">Event Type</Label>
+                  <select
+                    id="eventType"
+                    name="eventType"
+                    value={formData.eventType}
+                    onChange={handleChange}
+                    className="w-full p-2 border rounded-md mt-1"
+                  >
+                    <option value="">Select Event Type</option>
+                    {eventTypes.map(type => (
+                      <option key={type} value={type}>{type}</option>
+                    ))}
+                  </select>
+                </div>
+                
+                <div>
+                  <Label htmlFor="date">Date</Label>
+                  <Input
+                    id="date"
+                    name="date"
+                    type="date"
+                    value={formData.date}
+                    onChange={handleChange}
+                  />
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <Label htmlFor="startTime">Start Time</Label>
+                    <Input
+                      id="startTime"
+                      name="startTime"
+                      type="time"
+                      value={formData.startTime}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  
+                  <div>
+                    <Label htmlFor="endTime">End Time</Label>
+                    <Input
+                      id="endTime"
+                      name="endTime"
+                      type="time"
+                      value={formData.endTime}
+                      onChange={handleChange}
+                    />
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+          
+          {/* Contact Information */}
+          <Card>
+            <CardContent className="pt-6">
+              <h2 className="text-xl font-semibold mb-4">Contact Information</h2>
+              
+              <div className="space-y-4">
+                <div>
+                  <Label htmlFor="name">Full Name</Label>
+                  <Input
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                  />
+                </div>
+                
+                <div>
+                  <Label htmlFor="email">Email Address</Label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                  />
+                </div>
+                
+                <div>
+                  <Label htmlFor="phone">Phone Number</Label>
+                  <Input
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                  />
+                </div>
+                
+                <div>
+                  <Label htmlFor="specialRequests">Special Requests (Optional)</Label>
+                  <textarea
+                    id="specialRequests"
+                    name="specialRequests"
+                    value={formData.specialRequests}
+                    onChange={handleChange}
+                    className="w-full p-2 border rounded-md mt-1 h-24"
+                  />
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
-        <div>
-          <label className="block text-sm font-medium">Email</label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            className="mt-1 p-2 border w-full"
-            required
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium">Date</label>
-          <input
-            type="date"
-            name="date"
-            value={formData.date}
-            onChange={handleChange}
-            className="mt-1 p-2 border w-full"
-            required
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium">Time</label>
-          <input
-            type="time"
-            name="time"
-            value={formData.time}
-            onChange={handleChange}
-            className="mt-1 p-2 border w-full"
-            required
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium">Guests</label>
-          <input
-            type="number"
-            name="guests"
-            min="1"
-            value={formData.guests}
-            onChange={handleChange}
-            className="mt-1 p-2 border w-full"
-            required
-          />
-        </div>
-        <Button type="submit">Book Now</Button>
-      </form>
         
         {/* Booking Summary Card */}
         <div>
