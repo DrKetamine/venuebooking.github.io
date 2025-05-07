@@ -123,115 +123,134 @@ const Booking: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2 space-y-6">
           {/* Event Details Section */}
-          <Card>
-            <CardContent className="pt-6">
-              <h2 className="text-xl font-semibold mb-4">Event Details</h2>
-              
-              <div className="space-y-4">
-                <div>
-                  <Label htmlFor="eventType">Event Type</Label>
-                  <select
-                    id="eventType"
-                    name="eventType"
-                    value={formData.eventType}
-                    onChange={handleChange}
-                    className="w-full p-2 border rounded-md mt-1"
-                  >
-                    <option value="">Select Event Type</option>
-                    {eventTypes.map(type => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
+            <Card>
+              <CardContent className="pt-6">
+                <h2 className="text-xl font-semibold mb-4">Contact Information</h2>
                 
-                <div>
-                  <Label htmlFor="date">Date</Label>
-                  <Input
-                    id="date"
-                    name="date"
-                    type="date"
-                    value={formData.date}
-                    onChange={handleChange}
-                  />
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="space-y-4">
                   <div>
-                    <Label htmlFor="startTime">Start Time</Label>
+                    <Label htmlFor="name">Full Name</Label>
                     <Input
-                      id="startTime"
-                      name="startTime"
-                      type="time"
-                      value={formData.startTime}
+                      id="name"
+                      name="name"
+                      value={formData.name}
                       onChange={handleChange}
                     />
                   </div>
                   
                   <div>
-                    <Label htmlFor="endTime">End Time</Label>
+                    <Label htmlFor="email">Email Address</Label>
                     <Input
-                      id="endTime"
-                      name="endTime"
-                      type="time"
-                      value={formData.endTime}
+                      id="email"
+                      name="email"
+                      type="email"
+                      value={formData.email}
                       onChange={handleChange}
                     />
                   </div>
+                  
+                  <div>
+                    <Label htmlFor="phone">Phone Number</Label>
+                    <Input
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  
+                  {/* New checkboxes for services */}
+                  <div>
+                    <Label className="block mb-2">Services</Label>
+                    <div className="space-y-2">
+                      <div>
+                        <input
+                          type="checkbox"
+                          id="cleaning"
+                          name="cleaning"
+                          checked={formData.cleaning}
+                          onChange={handleChange}
+                          className="mr-2"
+                        />
+                        <Label htmlFor="cleaning">Cleaning</Label>
+                      </div>
+                      
+                      <div>
+                        <input
+                          type="checkbox"
+                          id="bar"
+                          name="bar"
+                          checked={formData.bar}
+                          onChange={handleChange}
+                          className="mr-2"
+                        />
+                        <Label htmlFor="bar">Bar</Label>
+                      </div>
+                      
+                      <div>
+                        <input
+                          type="checkbox"
+                          id="catering"
+                          name="catering"
+                          checked={formData.catering}
+                          onChange={handleChange}
+                          className="mr-2"
+                        />
+                        <Label htmlFor="catering">Catering</Label>
+                      </div>
+                      
+                      <div>
+                        <input
+                          type="checkbox"
+                          id="decorators"
+                          name="decorators"
+                          checked={formData.decorators}
+                          onChange={handleChange}
+                          className="mr-2"
+                        />
+                        <Label htmlFor="decorators">Decorators</Label>
+                      </div>
+                      
+                      <div>
+                        <input
+                          type="checkbox"
+                          id="projector"
+                          name="projector"
+                          checked={formData.projector}
+                          onChange={handleChange}
+                          className="mr-2"
+                        />
+                        <Label htmlFor="projector">Projector</Label>
+                      </div>
+                      
+                      <div>
+                        <input
+                          type="checkbox"
+                          id="microphone"
+                          name="microphone"
+                          checked={formData.microphone}
+                          onChange={handleChange}
+                          className="mr-2"
+                        />
+                        <Label htmlFor="microphone">Microphone</Label>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Special Requests Section */}
+                  <div>
+                    <Label htmlFor="specialRequests">Special Requests (Optional)</Label>
+                    <textarea
+                      id="specialRequests"
+                      name="specialRequests"
+                      value={formData.specialRequests}
+                      onChange={handleChange}
+                      className="w-full p-2 border rounded-md mt-1 h-24"
+                    />
+                  </div>
                 </div>
-              </div>
-            </CardContent>
-          </Card>
-          
-          {/* Contact Information */}
-          <Card>
-            <CardContent className="pt-6">
-              <h2 className="text-xl font-semibold mb-4">Contact Information</h2>
-              
-              <div className="space-y-4">
-                <div>
-                  <Label htmlFor="name">Full Name</Label>
-                  <Input
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                  />
-                </div>
-                
-                <div>
-                  <Label htmlFor="email">Email Address</Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                  />
-                </div>
-                
-                <div>
-                  <Label htmlFor="phone">Phone Number</Label>
-                  <Input
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                  />
-                </div>
-                
-                <div>
-                  <Label htmlFor="specialRequests">Special Requests (Optional)</Label>
-                  <textarea
-                    id="specialRequests"
-                    name="specialRequests"
-                    value={formData.specialRequests}
-                    onChange={handleChange}
-                    className="w-full p-2 border rounded-md mt-1 h-24"
-                  />
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
         </div>
         
         {/* Booking Summary Card */}
