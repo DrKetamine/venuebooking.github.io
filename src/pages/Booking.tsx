@@ -108,169 +108,65 @@ const Booking: React.FC = () => {
   }
 
   return (
-<div className="container mx-auto px-4 py-8">
-  {/* Back navigation */}
-  <Button 
-    variant="ghost" 
-    className="mb-4 pl-0 text-gray-600"
-    onClick={() => navigate(-1)}
-  >
-    <ChevronLeft className="mr-1 h-4 w-4" />
-    Back to venue
-  </Button>
-
-  <h1 className="text-3xl font-bold mb-8">Book {venue.name}</h1>
-
-  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-    {/* Booking Form */}
-    <div className="lg:col-span-2">
-      <form onSubmit={handleSubmit}>
-        {/* Event Details */}
-        <div className="bg-white rounded-lg border p-6 mb-8">
-          <h2 className="text-xl font-semibold mb-4">Event Details</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            {/* Event Type */}
-            <div>
-              <Label htmlFor="eventType">Event Type</Label>
-              <select
-                id="eventType"
-                name="eventType"
-                value={formData.eventType}
-                onChange={handleChange}
-                className="w-full h-10 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background"
-                required
-              >
-                <option value="">Select event type</option>
-                {eventTypes.map(type => (
-                  <option key={type} value={type}>{type}</option>
-                ))}
-              </select>
-            </div>
-
-            {/* Date */}
-            <div>
-              <Label htmlFor="date">Date</Label>
-              <Input
-                id="date"
-                type="date"
-                name="date"
-                value={formData.date}
-                onChange={handleChange}
-                min={new Date().toISOString().split('T')[0]}
-                required
-              />
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Start Time */}
-            <div>
-              <Label htmlFor="startTime">Start Time</Label>
-              <Input
-                id="startTime"
-                type="time"
-                name="startTime"
-                value={formData.startTime}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            {/* End Time */}
-            <div>
-              <Label htmlFor="endTime">End Time</Label>
-              <Input
-                id="endTime"
-                type="time"
-                name="endTime"
-                value={formData.endTime}
-                onChange={handleChange}
-                required
-              />
-            </div>
-          </div>
+    <div className="p-4 space-y-6">
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div>
+          <label className="block text-sm font-medium">Name</label>
+          <input
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            className="mt-1 p-2 border w-full"
+            required
+          />
         </div>
-
-        {/* User Info */}
-        <div className="bg-white rounded-lg border p-6">
-          <h2 className="text-xl font-semibold mb-4">Your Information</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            <div>
-              <Label htmlFor="name">Full Name</Label>
-              <Input
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <div>
-              <Label htmlFor="email">Email</Label>
-              <Input
-                id="email"
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-            </div>
-          </div>
-
-          <div className="mb-6">
-            <Label htmlFor="phone">Phone Number</Label>
-            <Input
-              id="phone"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-4">
-            {[
-              { id: 'cleaning', label: 'Need Cleaning Service' },
-              { id: 'bar', label: 'Need Bar Service' },
-              { id: 'catering', label: 'Need Catering Service' },
-              { id: 'decorators', label: 'Need Decorators' },
-              { id: 'projector', label: 'Need Projector' },
-              { id: 'microphone', label: 'Need Microphone' }
-            ].map(({ id, label }) => (
-              <div key={id} className="flex items-center space-x-2">
-                <input
-                  type="checkbox"
-                  id={id}
-                  name={id}
-                  checked={formData[id as keyof typeof formData] as boolean}
-                  onChange={handleChange}
-                />
-                <Label htmlFor={id}>{label}</Label>
-              </div>
-            ))}
-            </div>
-            <div className="mt-4">
-              <Label htmlFor="specialRequests">Special Requests (Optional)</Label>
-              <textarea
-                id="specialRequests"
-                name="specialRequests"
-                value={formData.specialRequests}
-                onChange={handleChange}
-                rows={4}
-                className="w-full min-h-[120px] rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background"
-              />
-            </div>
-          </div>
-          <div className="lg:hidden mt-8">
-            <Button type="submit" className="w-full bg-primary" disabled={isSubmitting}>
-              {isSubmitting ? 'Processing...' : 'Confirm Booking'}
-            </Button>
-          </div>
+        <div>
+          <label className="block text-sm font-medium">Email</label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            className="mt-1 p-2 border w-full"
+            required
+          />
         </div>
+        <div>
+          <label className="block text-sm font-medium">Date</label>
+          <input
+            type="date"
+            name="date"
+            value={formData.date}
+            onChange={handleChange}
+            className="mt-1 p-2 border w-full"
+            required
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium">Time</label>
+          <input
+            type="time"
+            name="time"
+            value={formData.time}
+            onChange={handleChange}
+            className="mt-1 p-2 border w-full"
+            required
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium">Guests</label>
+          <input
+            type="number"
+            name="guests"
+            min="1"
+            value={formData.guests}
+            onChange={handleChange}
+            className="mt-1 p-2 border w-full"
+            required
+          />
+        </div>
+        <Button type="submit">Book Now</Button>
       </form>
-    </div>
         
         {/* Booking Summary Card */}
         <div>
