@@ -235,7 +235,7 @@ const Booking: React.FC = () => {
                 name="cleaning"
                 checked={formData.cleaning}
                 onChange={handleChange}
-                className="h-4 w-4"
+                className=""
               />
               <Label htmlFor="cleaning">Need Cleaning Service</Label>
             </div>
@@ -246,7 +246,7 @@ const Booking: React.FC = () => {
                 name="bar"
                 checked={formData.bar}
                 onChange={handleChange}
-                className="h-4 w-4"
+                className=""
               />
               <Label htmlFor="bar">Need Bar Service</Label>
             </div>
